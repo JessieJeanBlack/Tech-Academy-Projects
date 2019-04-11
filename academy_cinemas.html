@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="./index.css"
   <title>Academy Cinemas</title>
 </head>
 
@@ -158,20 +159,80 @@
               </div>
             </div>
           </div>
-        
-
-
-
       
         <!--/Showtimes-->
+		
+		<!--JUMBOTRON HEADING-->
+		<div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+			<div class="container">
+				<h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase;">Movie Deals</h1>
+				<p class="lead">Check out our monthly deals...</p>
+				<!--Movie Deals-->
+				<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our monthly movie deals!</button>
+				<!--/Movie Deals-->
+			</div>
+		</div>
+		<!--/JUMBOTRON HEADING-->
 
         
-        <div class="text-center" id="Showtimes">
+        <div class="text-center" id="Rewards">
             <form>
-              <h1 class="text-primary my-5" name="Rewards">Sign up for Movie Club Rewards!</h1>
+              <h1 class="text-primary my-5" name="Rewards">Stay Current on Movies!!</h1>
                 <div class="form-group">
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals!">
+  Sign Up
+</button>
+
+		<!--Form Modal-->
+		<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Register to receive movie deals...</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+			  
+			  <form>
+				 <fieldset class="form-group text-left">
+					<label for="firstname">First Name:</label>
+					<input type="text" class="form-control" id="firstname" placeholder="First Name...">
+				  </fieldset>
+				<fieldset class="form-group text-left">
+					<label for="lastname">Last Name:</label>
+					<input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+				  </fieldset>
+				  <fieldset class="form-group text-left">
+					<label for="email">Email:</label>
+					<input type="text" class="form-control" id="email" placeholder="Email...">
+				  </fieldset>
+				  <fieldset class="form-group text-left">
+					<label for="password">Password:</label>
+					<input type="text" class="form-control" id="password" placeholder="Password...">
+				  </fieldset>
+			 </form>
+			  
+			  
+			  
+			  
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+		
+		
+		
+		<!--/End Form Modal-->
             </form>
         </div>
         <div class="container my-5">
@@ -211,6 +272,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
+	  
+	  <script>
+	  $('.popover-dismiss').popover({
+			trigger: 'focus'
+		})
+	  
+	  
+	  
+	  </script>
 </body>
 
 </html>
