@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Drill Demo</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<style>#menuBG{width:400px;height:470px;margin:10px auto;}#frmMenu{width:400px;height:200px;}
+		#totalPrice{width:200px;height:190px;margin:0 auto;float:right;}.left{width:200px;height:200px;float:left;}
+		.right{width:200px;height:200px;float:right;}#showText{width:200px;height:190px;margin:0px auto;float:left;}
+		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
+		</style>
+		<link rel = "stylesheet" type = "text/css" href = "nopizza.css" />
+	</head>
+	<body>	
+    <form>
+		<div class="container">
+      <h1>Black's Pizzeria</h1>
+			<form id="frmMenu">
+				<div class="menu">
+					<h3>Choose Your Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extr"> Extra Large Pizza<br>
+				</div>
+				<div class="menu">
+					<h3>Choose Your Crust:</h3>
+					<input class="crust" type="radio" name="Crust" value="0.00"> House Special<br>
+					<input class="crust" type="radio" name="Crust" value="0.00"> Plain <br>
+					<input class="crust" type="radio" name="Crust" value="0.00"> Garlic Butter<br> 
+					<input class="crust" type="radio" name="Crust" value="0.00"> Spicy<br>
+					<input class="crust" type="radio" name="Crust" value="0.00"> Cheese Stuffed<br>
+				</div>
+				<div class="menu">
+					<h3>Choose Your Sauce:</h3>
+					<input class="sauce" type="radio" name="Sauces" value="Marinara Sauce"> House Marinara Sauce<br> 
+					<input class="sauce" type="radio" name="Sauces" value="White Sauce"> White Sauce<br>
+					<input class="sauce" type="radio" name="Sauces" value="Barbeque"> Tangy Barbeque Sauce<br>
+					<input class="sauce" type="radio" name="Sauces" value="No Sauce"> No Sauce<br>
+				</div>
+				<div class="menu">
+					<h3>Choose Your Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage<br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+				</div>
+				<div class="menu">
+					<h3>Choose Your Vegetables:</h3>
+					<input class="veggies" type="checkbox" name="Veggie" value="Tomatoes"> Tomatoes<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Onions"> Onions<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Bell Peppers"> Bell Peppers<br> 
+					<input class="veggies" type="checkbox" name="Veggie" value="Mushrooms"> Mushrooms<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Olives"> Olives<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Spinach"> Spinach<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Jalapanos"> Jalapanos<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Banana Peppers"> Banana Peppers<br>
+					<input class="veggies" type="checkbox" name="Veggie" value="Pineapple"> Pineapple<br>
+				</div>
+      </form>
+       <div class="controls">
+			<input id="btnOrder" type="button" onclick="getReceipt"() value="Place Order">
+      <input id="btnClear" type="button" onclick="clearAll"() value="Cancel Order">
+        </div>
+			 
+				
+				<div id="cart">
+          <div id="title1"><h3>You ordered:</h3></div>
+          <div id="title2"><h3>Subtotal:</h3></div>
+					<div id="showText"></div>
+          <div id="showText2"></div>
+					<div id="totalPrice1"></div>
+          <div id="totalPrice2"></div>
+        </div>
+		</div>
+	<script src="final_drill_basic.js"></script>
+	<script src="badpizza.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
+	"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<script>
+	$(function () {
+	 $('[data-toggle="popover"]').popover()
+	})
+	</script>
+	</body>
+</html>
+		
