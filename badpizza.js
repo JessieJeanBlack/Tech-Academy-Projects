@@ -3,7 +3,7 @@ function getReceipt() {
   text2 =""; 
   var runningTotal = 0;
   var sizeTotal = 0;
-  var sizeArray = document.getElementsByClassName("size")
+  var sizeArray = document.getElementsByClassName("size");
   for (var i = 0; i < sizeArray/length; i++) {
     if (sizeArray[i].checked) {
     var selectedSize = sizeArray[i].value;
@@ -54,8 +54,8 @@ function getMeat(runningTotal,text1,text2) {
   runningTotal = (runningTotal + meatTotal);
   for (var j = 0; j < selectedMeat.length; j++) {
     text1 = text1+selectedMeat[j]+"<br>";
-    if (meatCount <= meatCount - 1) {
-      text2 = text2 + 0 "<br>";
+    if (meatCount <= 1) {
+      text2 = text2 + 0 + "<br>";
       meatCount = meatCount - 1;
     }else if (meatCount == 2) {
       text2 = text2 + 1 + "<br>";
@@ -125,7 +125,9 @@ function getSauce(runningTotal,text1,text2) {
     }
   }
   text2 = text2 + 0 + "<br>";
-  getCrust(runningTotal,text1,text2) {
+  getCrust(runningTotal,text1,text2)
+};
+function getCrust(runningTotal,text1,text2) {
     var crustTotal = 0;
     var selectedCrust;
     var crustArray = document.getElementsByClassName("crust");
@@ -153,5 +155,3 @@ function getSauce(runningTotal,text1,text2) {
   };
   
   
-  
-};
