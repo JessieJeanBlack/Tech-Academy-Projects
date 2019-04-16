@@ -3,40 +3,46 @@
 	<head>
 		<title>Pizza Drill Demo</title>
 		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-		<meta content="width=device-width,initial-scale=1.0" name="viewport">
-		<style>#menuBG{width:400px;height:470px;margin:10px auto;}#frmMenu{width:400px;height:200px;}
-		#totalPrice{width:200px;height:190px;margin:0 auto;float:right;}.left{width:200px;height:200px;float:left;}
-		.right{width:200px;height:200px;float:right;}#showText{width:200px;height:190px;margin:0px auto;float:left;}
-		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
-		</style>
-		<link rel = "stylesheet" type = "text/css" href = "nopizza.css" />
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">	
+		<link rel="stylesheet" type="text/css" href="./nopizza.css"/>
 	</head>
 	<body>	
     <form>
 		<div class="container">
+		<div class="mycontainer">
+			<img src="pizzaimage.jpg" alt="">
+		</div>
+		<div id="myForm">
       <h1>Black's Pizzeria</h1>
 			<form id="frmMenu">
 				<div class="menu">
 					<h3>Choose Your Size:</h3>
-					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
-					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Personal Pizza" checked> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza" checked> Medium Pizza<br>
 					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
-					<input class="size" type="radio" name="Size" value="Extr"> Extra Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza" checked> Extra Large Pizza<br>
+				</div>
+				<div class="menu">
+				<h3>Choose Your Cheese:</h3>
+					<input class="cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Light Cheese"> Light Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Extra Cheese"> Extra Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
 				</div>
 				<div class="menu">
 					<h3>Choose Your Crust:</h3>
-					<input class="crust" type="radio" name="Crust" value="0.00"> House Special<br>
-					<input class="crust" type="radio" name="Crust" value="0.00"> Plain <br>
-					<input class="crust" type="radio" name="Crust" value="0.00"> Garlic Butter<br> 
-					<input class="crust" type="radio" name="Crust" value="0.00"> Spicy<br>
-					<input class="crust" type="radio" name="Crust" value="0.00"> Cheese Stuffed<br>
+					<input class="crust" type="radio" name="Crust" value="House Special"> House Special<br>
+					<input class="crust" type="radio" name="Crust" value="Plain"> Plain <br>
+					<input class="crust" type="radio" name="Crust" value="Garlic Butter"> Garlic Butter<br> 
+					<input class="crust" type="radio" name="Crust" value="Spicy"> Spicy<br>
+					<input class="crust" type="radio" name="Crust" value="Cheese Stuffed"> Cheese Stuffed<br>
 				</div>
 				<div class="menu">
 					<h3>Choose Your Sauce:</h3>
-					<input class="sauce" type="radio" name="Sauces" value="Marinara Sauce"> House Marinara Sauce<br> 
-					<input class="sauce" type="radio" name="Sauces" value="White Sauce"> White Sauce<br>
-					<input class="sauce" type="radio" name="Sauces" value="Barbeque"> Tangy Barbeque Sauce<br>
-					<input class="sauce" type="radio" name="Sauces" value="No Sauce"> No Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="Marinara Sauce"> House Marinara Sauce<br> 
+					<input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="Barbeque"> Tangy Barbeque Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="No Sauce"> No Sauce<br>
 				</div>
 				<div class="menu">
 					<h3>Choose Your Meats:</h3>
@@ -61,8 +67,8 @@
 				</div>
       </form>
        <div class="controls">
-			<input id="btnOrder" type="button" onclick="getReceipt"() value="Place Order">
-      <input id="btnClear" type="button" onclick="clearAll"() value="Cancel Order">
+			<input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+      <input id="btnClear" type="button" onclick="clearAll()" value="Cancel Order">
         </div>
 			 
 				
@@ -72,10 +78,9 @@
 					<div id="showText"></div>
           <div id="showText2"></div>
 					<div id="totalPrice1"></div>
-          <div id="totalPrice2"></div>
+          <div id="totalPrice1"></div>
         </div>
 		</div>
-	<script src="final_drill_basic.js"></script>
 	<script src="badpizza.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=
 	"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
