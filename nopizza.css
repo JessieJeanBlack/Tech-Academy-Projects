@@ -1,10 +1,20 @@
 .container {
-  opacity: 0.95;
+  opacity: 1;
 }
 
 body {
-  back-ground-color: #fff;
-  back-ground: url('pizzaimage.jpg') no-repeat center center fixed;
+  background-image: url('pizzaimage.jpg') no-repeat center center fixed;
+}
+
+form {
+	background-image: url("pizzaimage.jpg");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	text-align: left;
+	font-style: bold;
+	z-index: 2;
+	color: black;
 }
 
 #menuBG {
@@ -13,6 +23,8 @@ body {
   border-radius: 25px;
   /*border: 3px solid #080054; */
   padding: 1px 0px;
+  z-index: 2;
+  background-color: #f29a80;
   /*background-color: #f29a80;*/
   /*background-color: #2b65c4;*/
   /*box-shadow: 0 0 0 3px rgba(225,225,225, .8); */
@@ -23,6 +35,7 @@ body {
 
 #menuBG>h1 {
   font-family: 'Anton', sans-serif;
+  z-index: 2
   font-size: 60px;
   color: #00f;
   text-shadow: 1.5px 1.5px 5px #fff, 1px 1px 5px #000;
@@ -31,7 +44,8 @@ body {
 }
 
 #frmMenu {
-  margin: 0% auto;
+  margin: 0% auto
+  z-index: 2;
   width: 550px;
   display: flex;
   flex-wrap: wrap;
@@ -43,8 +57,8 @@ body {
 
 .menu {
   flex: 1 150px;
+  z-index: 2
   min-width: 0;
-  border: 2px solid #080054;
   box-shadow: 0 0 0 3px rgba(225,225,225, .7);
   padding: 0 0 10px 0;
 }
@@ -60,7 +74,6 @@ menu:nth-child(odd) {
 }
 
 menu>H3 {
-  color: #fff;
   padding: 0 0 0 60px;
   margin: 0% auto;
   background-color: rgba(42, 76, 132, .8);
@@ -70,15 +83,15 @@ menu>H3 {
 
 .button {
   cursor: pointer;
-  color: #fff;
-  width: 100%;
+  color: white;
+  width: 200px;
   display: block;
   text-decoration: none;
   border-radius: .5em;
   margin: 1% auto;
   padding: .1px 0 .1px 0px;
   font: 18px sans-serif;
-  background-color: rgba(42, 76, 132, .95); /*#648bc;*/
+  background-color: #4CAF%)
   box-shadow: 0 0 0 2px rgba(225,225, 225, .8);
   transition-property: transform background, box-shadow, color;
   transition-duration: .3s, .5s, .2s;
@@ -93,8 +106,8 @@ menu>H3 {
 .button:hover {
   font: 18px sans-serif;
   font-weight: bold;
-  color: #000;
   background-color: rgba(255, 255, 255, .6);
+  color: red;
   box-shadow: 0 0 0 2px #080054;
 }
 
@@ -162,7 +175,7 @@ menu>H3 {
 #totalPrice2 {
   flex: 1 250px; 
   font-weight: bold;
-  paddingL 20px 0 10px 10px;
+  padding: 20px 0 10px 10px;
   width: 250;
   border-radius: 0 0 0 0;
 }
@@ -204,6 +217,7 @@ menu>H3 {
 
 #frmMenu_basic, 
 #cart_basic {
+  z-index: 2
   width: 400px;
   margin: 0 auto;
 }
@@ -224,6 +238,7 @@ xmp {
 }
 .menu_basic,
 #showText {
+  z-index: 2;
   width: 40%;
   margin: 20px auto;
   float: left;
