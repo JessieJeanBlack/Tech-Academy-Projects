@@ -3,8 +3,8 @@ function getReceipt() {
   text2 =""; 
   var runningTotal = 0;
   var sizeTotal = 0;
-  var sizeArray = document.getElementsByClassName("size")
-  for (var i = 0; i < sizeArray/length; i++) {
+  var sizeArray = document.getElementsByClassName("size");
+  for (var i = 0; i < sizeArray.length; i++) {
     if (sizeArray[i].checked) {
     var selectedSize = sizeArray[i].value;
     text1 = text1+selectedSize+"<br>";
@@ -12,7 +12,7 @@ function getReceipt() {
  }
 if (selectedSize === "Personal Pizza") {
   sizeTotal = 6;
-  text2 = text2+sizeTotal+"<br>";
+  text2 = text1+sizeTotal+"<br>";
 }else if (selectedSize === "Medium Pizza") {
   sizeTotal = 10;
   text2 = text2+selectedSize+"<br>";
@@ -23,6 +23,8 @@ if (selectedSize === "Personal Pizza") {
   sizeTotal = 16;
   text2 = text2+selectedSize+"<br>";
 }
+console.log(text1 + "text2 size");
+console.log(text2 + "text2 size");
 runningTotal = sizeTotal;
 getMeat(runningTotal,text1,text2); // All three of these variables will be passed on to each function
 };
@@ -36,7 +38,6 @@ getMeat(runningTotal,text1,text2); // All three of these variables will be passe
 //just keep up until we've added all items to running total
 
 function getMeat(runningTotal,text1,text2) {
-  var runningTotal = runningTotal;
   var meatTotal = 0;
   var selectedMeat = [];
   var meatArray = document.getElementsByClassName("meats");
@@ -54,8 +55,8 @@ function getMeat(runningTotal,text1,text2) {
   runningTotal = (runningTotal + meatTotal);
   for (var j = 0; j < selectedMeat.length; j++) {
     text1 = text1+selectedMeat[j]+"<br>";
-    if (meatCount <= meatCount - 1) {
-      text2 = text2 + 0 "<br>";
+    if (meatCount <= 1) {
+      text2 = text2 + 0 + "<br>";
       meatCount = meatCount - 1;
     }else if (meatCount == 2) {
       text2 = text2 + 1 + "<br>";
@@ -73,7 +74,7 @@ function getVeggie(runningTotal,text1,text2) {
   var veggieTotal = 0;
   var selectedVeggie = [];
   var veggieArray = document.getElementsByClassName("veggies");
-  for (var j = 0; j < veggitArray.length; j++) {
+  for (var j = 0; j < veggieArray.length; j++) {
     if (veggieArray[j].checked) {
       selectedVeggie.push(veggieArray[j].value);
     }
@@ -97,7 +98,7 @@ var veggieCount = selectedVeggie.length;
       veggieCount = veggieCount - 1;
     }
   }
-getCheese(runnintTotal,text1,text2);
+getCheese(runningTotal,text1,text2);
 };
 function getCheese(runningTotal,text1,text2) {
   var cheeseTotal = 0;
@@ -125,7 +126,9 @@ function getSauce(runningTotal,text1,text2) {
     }
   }
   text2 = text2 + 0 + "<br>";
-  getCrust(runningTotal,text1,text2) {
+  getCrust(runningTotal,text1,text2)
+};
+function getCrust(runningTotal,text1,text2) {
     var crustTotal = 0;
     var selectedCrust;
     var crustArray = document.getElementsByClassName("crust");
@@ -134,24 +137,22 @@ function getSauce(runningTotal,text1,text2) {
         selectedCrust = crustArray[j].value;
         text1 = text1 + selectedCrust + "<br>";
       }
-      if (selectedCrust === "Cheese Stuffed Crust") {
+      if (selectedCrust === "Cheese Stuffed") {
         crustTotal = 3;
       }
     }
     runningTotal = (runningTotal + crustTotal);
     text2 = text2 + crustTotal + "<br>";
     document.getElementById("cart").style.opacity=1;
-    document.getElementById("showText1").innerHTML=text1;
-    document.getElementById("showtext2").innerHTML=text2;
-    document.getElementById("totalPrice2").innerHTML = "</h3>$"+runningTotal+"</h3>";
+    document.getElementById("showText").innerHTML=text1;
+	document.getElementById("showText2").innerHTML=text2;
+    document.getElementById("totalPrice1").innerHTML= "</h3>$"+runningTotal+".00"+"</h3>";
   };
   //This code clears the form selections to their defaults and the
   //corresponding div's CSS opacity to 0, effectively hiding them
   function clearAll() {
-    document.getElementById("frmMenu").reset();
-    document.getElementById("cart").style.opacity =0;
+    document.getElementsByClassName("menu").reset();
+    document.getElementById("cart").reset();
   };
   
   
-  
-};
