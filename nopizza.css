@@ -4,6 +4,7 @@
 
 body {
   background-image: url('pizzaimage.jpg') no-repeat center center fixed;
+  opacity: 1;
 }
 
 form {
@@ -14,7 +15,10 @@ form {
 	text-align: left;
 	font-style: bold;
 	z-index: 2;
-	color: black;
+	opacity: .7;
+	color: darkred;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 #menuBG {
@@ -35,7 +39,7 @@ form {
 
 #menuBG>h1 {
   font-family: 'Anton', sans-serif;
-  z-index: 2
+  z-index: 2;
   font-size: 60px;
   color: #00f;
   text-shadow: 1.5px 1.5px 5px #fff, 1px 1px 5px #000;
@@ -44,7 +48,7 @@ form {
 }
 
 #frmMenu {
-  margin: 0% auto
+  margin: 0% auto;
   z-index: 2;
   width: 550px;
   display: flex;
@@ -126,7 +130,7 @@ menu>H3 {
 #cart {
   opacity: 0%;
   margin: 15px;
-  width: 550px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -151,6 +155,7 @@ menu>H3 {
 
 #showText1 {
   font-size: 13px;
+  margin: 20px auto;
   flex: 1 250px;
   padding: 1px 0 10px 10px;
   width: 250px;
@@ -158,14 +163,16 @@ menu>H3 {
 }
 
 #showText2 {
-  font-size: 13px;
+  font-size: 16px;
+  margin: 20px auto;
   flex: 1 250px;
   padding: 1px 0 10px 10px;
   width: 250px;
   border-radius: 0 0 0 0;
 }
 
-#totalPrice {
+#totalPrice1 {
+  margin-left: 440px;
   flex: 1 250px;
   padding: 0 0 10px 10px;
   width: 250px;
