@@ -3,17 +3,13 @@
 	<head>
 		<title>Pizza Drill Demo</title>
 		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-		<meta content="width=device-width,initial-scale=1.0" name="viewport">
-		<style>#menuBG{width:400px;height:470px;margin:10px auto;}#frmMenu{width:400px;height:200px;}
-		#totalPrice{width:200px;height:190px;margin:0 auto;float:right;}.left{width:200px;height:200px;float:left;}
-		.right{width:200px;height:200px;float:right;}#showText{width:200px;height:190px;margin:0px auto;float:left;}
-		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
-		</style>
-		<!-- <link rel = "stylesheet" type = "text/css" href = "nopizza.css" /> -->
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">	
+		<link rel="stylesheet" type="text/css" href="./nopizza.css"/>
 	</head>
 	<body>	
     <form>
 		<div class="container">
+		<div id="myForm">
       <h1>Black's Pizzeria</h1>
 			<form id="frmMenu">
 				<div class="menu">
@@ -22,6 +18,13 @@
 					<input class="size" type="radio" name="Size" value="Medium Pizza" checked> Medium Pizza<br>
 					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
 					<input class="size" type="radio" name="Size" value="Extra Large Pizza" checked> Extra Large Pizza<br>
+				</div>
+				<div class="menu">
+				<h3>Choose Your Cheese:</h3>
+					<input class="cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Light Cheese"> Light Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Extra Cheese"> Extra Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
 				</div>
 				<div class="menu">
 					<h3>Choose Your Crust:</h3>
@@ -72,7 +75,7 @@
 					<div id="showText"></div>
           <div id="showText2"></div>
 					<div id="totalPrice1"></div>
-          <div id="totalPrice2"></div>
+          <div id="totalPrice1"></div>
         </div>
 		</div>
 	<script src="badpizza.js"></script>
